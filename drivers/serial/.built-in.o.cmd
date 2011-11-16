@@ -1,0 +1,1 @@
+cmd_drivers/serial/built-in.o :=  ../2.3.7_r1/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi-ld -EL    -r -o drivers/serial/built-in.o drivers/serial/serial_core.o drivers/serial/bcm_bt_lpm.o drivers/serial/msm_serial_hs.o drivers/serial/msm_serial_hs_ti.o drivers/serial/msm_serial_hs_bcm.o drivers/serial/msm_serial_hs_brcm.o 
