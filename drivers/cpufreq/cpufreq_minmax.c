@@ -310,7 +310,7 @@ static void dbs_check_cpu(int cpu)
 {
 	unsigned int idle_ticks, up_idle_ticks, down_idle_ticks;
 	unsigned int tmp_idle_ticks, total_idle_ticks;
-	//unsigned int freq_target;
+	unsigned int freq_target;
 	unsigned int freq_down_sampling_rate;
 	struct cpu_dbs_info_s *this_dbs_info = &per_cpu(cpu_dbs_info, cpu);
 	struct cpufreq_policy *policy;
@@ -571,4 +571,3 @@ fs_initcall(cpufreq_gov_dbs_init);
 module_init(cpufreq_gov_dbs_init);
 #endif
 module_exit(cpufreq_gov_dbs_exit);
-
