@@ -147,12 +147,18 @@ config CPU_FREQ_DEFAULT_GOV_INTERACTIVEX
     		loading your cpufreq low-level hardware driver, using the
 		interactiveX' governor for latency-sensitive workloads.
 
+config CPU_FREQ_DEFAULT_GOV_SAVAGEDZEN
+	bool "savagedzen"
+	select CPU_FREQ_GOV_SAVAGEDZEN
+	help
+	  Use the CPUFreq governor 'savagedzen' as default.
+
 endchoice
 
 config CPU_FREQ_VDD_LEVELS
 	bool "CPU Vdd levels sysfs interface"
 	depends on CPU_FREQ_STAT
-	depends on ARCH_MSM7225
+	depends on ARCH_MSM7x30
 	default n
 	help
 	  CPU Vdd levels sysfs interface
@@ -269,6 +275,11 @@ config CPU_FREQ_GOV_INTERACTIVEX
 	tristate "'interactiveX' cpufreq policy governor"	
 	help	
 	  'interactiveX' - Modified version of interactive with sleep+wake code.
+
+config CPU_FREQ_GOV_SAVAGEDZEN
+	tristate "'savagedzen' cpufreq policy governor"	
+	help	
+	  'savagedzen' - savagedzen CPU governor.
 
 config CPU_FREQ_MIN_TICKS
 	int "Ticks between governor polling interval."
