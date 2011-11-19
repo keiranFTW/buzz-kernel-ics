@@ -149,6 +149,14 @@ config CPU_FREQ_DEFAULT_GOV_INTERACTIVEX
 
 endchoice
 
+config CPU_FREQ_VDD_LEVELS
+	bool "CPU Vdd levels sysfs interface"
+	depends on CPU_FREQ_STAT
+	depends on ARCH_MSM7225
+	default n
+	help
+	  CPU Vdd levels sysfs interface
+
 config CPU_FREQ_GOV_PERFORMANCE
 	tristate "'performance' governor"
 	help
