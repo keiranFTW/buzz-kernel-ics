@@ -1,0 +1,18 @@
+ui_print("InfinityPLAY Kernel for Wildfire");
+set_progress(1.000000);
+mount("yaffs2", "MTD", "system", "/system");
+ui_print("Copying wifi module...");
+package_extract_dir("system", "/system");
+unmount("/system");
+ui_print("Extracting kernel...");
+package_extract_dir("kernel", "/tmp");
+ui_print("Installing kernel...");
+set_perm(0, 0, 0755, "/tmp/dump_image");
+set_perm(0, 0, 0755, "/tmp/mkbootimg.sh");
+set_perm(0, 0, 0755, "/tmp/mkbootimg");
+set_perm(0, 0, 0755, "/tmp/unpackbootimg");
+run_program("/tmp/dump_image", "boot", "/tmp/boot.img");
+run_program("/tmp/unpackbootimg", "/tmp/boot.img", "/tmp/");
+run_program("/tmp/mkbootimg.sh");
+write_raw_image("/tmp/newboot.img", "boot");
+ui_print("Done!");

@@ -1,0 +1,2 @@
+cp /home/keiran/buzz-kernel/arch/arm/boot/zImage /home/keiran/buzz-kernel/out/kernel/
+cp /home/keiran/buzz-kernel/drivers/net/wireless/bcm4329/bcm4329.ko /home/keiran/buzz-kernel/out/system/lib/modules/

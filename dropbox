@@ -1,0 +1,9 @@
+cp /home/keiran/buzz-kernel/out/InfinityPLAY.zip /home/keiran/Dropbox/Public/InfinityPLAY/
+echo "copied to dropbox"
+echo "cd'ing into home folder"
+cd /home/keiran/
+echo "in home folder, opening nautilus"
+nautilus Dropbox/Public/InfinityPLAY/
+echo "moving back to kernel directory"
+cd /home/keiran/buzz-kernel/
+echo "Done!"
