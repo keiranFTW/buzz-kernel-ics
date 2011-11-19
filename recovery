@@ -1,0 +1,6 @@
+echo "cd /home/keiran/Dropbox/Public/InfinityPLAY"
+cd /home/keiran/Dropbox/Public/InfinityPLAY/
+echo "adb devices"
+adb devices
+echo "adb reboot recovery"
+adb reboot recovery
