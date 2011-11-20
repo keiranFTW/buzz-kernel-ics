@@ -1,4 +1,4 @@
 rm out/kernel/zImage
 rm out/system/lib/modules/bcm4329.ko
-rm out/infinityplay.zip
+rm out/InfinityPLAY.zip
 
