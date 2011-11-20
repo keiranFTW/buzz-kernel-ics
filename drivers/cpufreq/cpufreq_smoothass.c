@@ -69,7 +69,7 @@ static unsigned long down_rate_us;
  * When ramping up frequency with no idle cycles jump to at least this frequency.
  * Zero disables. Set a very high value to jump to policy max freqeuncy.
  */
-#define DEFAULT_UP_MIN_FREQ 1804800
+#define DEFAULT_UP_MIN_FREQ 729600
 static unsigned int up_min_freq;
 
 /*
@@ -78,7 +78,7 @@ static unsigned int up_min_freq;
  * to minimize wakeup issues.
  * Set sleep_max_freq=0 to disable this behavior.
  */
-#define DEFAULT_SLEEP_MAX_FREQ 245760
+#define DEFAULT_SLEEP_MAX_FREQ 264000
 static unsigned int sleep_max_freq;
 
 /*
@@ -620,6 +620,6 @@ static void __exit cpufreq_smoothass_exit(void)
 
 module_exit(cpufreq_smoothass_exit);
 
-MODULE_AUTHOR ("Erasmux, modified by LeeDrOiD, modified by Keiran");
+MODULE_AUTHOR ("Erasmux, modified by LeeDrOiD, modified for buzz by Keiran");
 MODULE_DESCRIPTION ("'cpufreq_smoothass' - A smart cpufreq governor");
 MODULE_LICENSE ("GPL");
