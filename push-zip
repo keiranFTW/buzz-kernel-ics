@@ -1,2 +1,2 @@
-echo "adb push InfinityPLAY.zip /sdcard/InfinityPLAY.zip"
+echo "adb push InfinityPLAY.zip /sdcard/Infinity.zip"
 adb push /home/keiran/Dropbox/Public/InfinityPLAY/InfinityPLAY.zip /sdcard/Infinity.zip
