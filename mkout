@@ -1,2 +1,5 @@
-cp /home/keiran/buzz-kernel/arch/arm/boot/zImage /home/keiran/buzz-kernel/out/kernel/
-cp /home/keiran/buzz-kernel/drivers/net/wireless/bcm4329/bcm4329.ko /home/keiran/buzz-kernel/out/system/lib/modules/
+cp arch/arm/boot/zImage out/kernel/
+cp drivers/net/wireless/bcm4329/bcm4329.ko out/system/lib/modules/
+cd out
+rm InfinityPLAY.zip
+zip -r InfinityPLAY.zip system META-INF kernel

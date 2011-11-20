@@ -1,2 +1,4 @@
-rm /home/keiran/buzz-kernel/out/kernel/zImage
-rm /home/keiran/buzz-kernel/out/system/lib/modules/bcm4329.ko
+rm out/kernel/zImage
+rm out/system/lib/modules/bcm4329.ko
+rm out/infinityplay.zip
+

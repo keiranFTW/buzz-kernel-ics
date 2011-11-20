@@ -1,3 +1,2 @@
-rm /home/keiran/Dropbox/Public/InfinityPLAY/InfinityPLAY.zip
-cp /home/keiran/buzz-kernel/out/InfinityPLAY.zip /home/keiran/Dropbox/Public/InfinityPLAY/
-echo "InfinityPLAY.zip sent to dropbox"
+rm ../Dropbox/Public/InfinityPLAY/InfinityPLAY.zip
+cp out/InfinityPLAY.zip ../Dropbox/Public/InfinityPLAY/
