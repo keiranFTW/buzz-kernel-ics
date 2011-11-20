@@ -159,6 +159,12 @@ config CPU_FREQ_DEFAULT_GOV_SMOOTHASS
 	help
 	  Use the CPUFreq governor 'smoothass' as default.
 
+config CPU_FREQ_DEFAULT_GOV_LAGFREE
+	bool "lagfree"
+	select CPU_FREQ_GOV_LAGFREE
+	help
+	  Use the CPUFreq governor 'lagfree' as default.
+
 endchoice
 
 config CPU_FREQ_VDD_LEVELS
@@ -291,6 +297,11 @@ config CPU_FREQ_GOV_SMOOTHASS
 	tristate "'smoothass' cpufreq policy governor"	
 	help	
 	  'smoothass' - smoothass CPU governor.
+
+config CPU_FREQ_GOV_LAGFREE
+	tristate "'lagfree' cpufreq policy governor"	
+	help	
+	  'lagfree' - lagfree CPU governor.
 
 config CPU_FREQ_MIN_TICKS
 	int "Ticks between governor polling interval."

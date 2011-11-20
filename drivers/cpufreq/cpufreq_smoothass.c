@@ -620,6 +620,6 @@ static void __exit cpufreq_smoothass_exit(void)
 
 module_exit(cpufreq_smoothass_exit);
 
-MODULE_AUTHOR ("Erasmux, modified by LeeDrOiD");
+MODULE_AUTHOR ("Erasmux, modified by LeeDrOiD, modified by Keiran");
 MODULE_DESCRIPTION ("'cpufreq_smoothass' - A smart cpufreq governor");
 MODULE_LICENSE ("GPL");

@@ -745,7 +745,7 @@ static void __exit cpufreq_savagedzen_exit(void)
 
 module_exit(cpufreq_savagedzen_exit);
 
-MODULE_AUTHOR ("jsseidel");
+MODULE_AUTHOR ("jsseidel, modified by Keiran");
 MODULE_DESCRIPTION ("'cpufreq_savagedzen' - A badass cpufreq governor! Based on Smartass");
 MODULE_LICENSE ("GPL");
 
