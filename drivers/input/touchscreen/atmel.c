@@ -943,15 +943,16 @@ static void compatible_input_report(struct input_dev *idev,
 	if (!press) {
       		input_report_key(idev, BTN_TOUCH, 0);
 		input_report_abs(idev, ABS_MT_TOUCH_MAJOR, 0);
+		input_report_abs(idev, ABS_MT_PRESSURE, 0);
 	}else {
-		input_report_key(idev, BTN_TOUCH, 1);
+		input_report_key(idev, BTN_TOUCH, 0x01);
 		input_report_abs(idev, ABS_MT_TOUCH_MAJOR, fdata->z);
 		input_report_abs(idev, ABS_MT_WIDTH_MAJOR, fdata->w);
 		input_report_abs(idev, ABS_MT_POSITION_X, fdata->x);
 		input_report_abs(idev, ABS_MT_POSITION_Y, fdata->y);
 		input_report_abs(idev, ABS_MT_PRESSURE, fdata->z);
-		input_mt_sync(idev);
 	}
+	input_mt_sync(idev);
 }
 
 #ifndef CONFIG_TOUCHSCREEN_COMPATIBLE_REPORT
@@ -964,7 +965,7 @@ static void htc_input_report(struct input_dev *idev,
 		input_report_abs(idev, ABS_MT_PRESSURE, 0);
 		input_report_abs(idev, ABS_MT_POSITION, BIT(31));
 	} else {
-		input_report_key(idev, BTN_TOUCH, 1);
+		input_report_key(idev, BTN_TOUCH, 0x01);
 		input_report_abs(idev, ABS_MT_AMPLITUDE, fdata->z << 16 | fdata->w);
 		input_report_abs(idev, ABS_MT_POSITION,
 			(last ? BIT(31) : 0) | fdata->x << 16 | fdata->y);

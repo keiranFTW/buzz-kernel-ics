@@ -470,7 +470,7 @@ static int synaptics_ts_probe(
 	}
 	ts->input_dev->name = "synaptics-rmi-touchscreen";
 	set_bit(EV_SYN, ts->input_dev->evbit);
-	set_bit(EV_KEY, ts->input_dev->evbit);
+	set_bit(EV_KEY, ts->input_dev->keybit);
 	set_bit(BTN_TOUCH, ts->input_dev->keybit);
 	set_bit(BTN_2, ts->input_dev->keybit);
 	set_bit(EV_ABS, ts->input_dev->evbit);
@@ -489,6 +489,7 @@ static int synaptics_ts_probe(
 		0, ((255 << 16) | 15), 0, 0);
 	input_set_abs_params(ts->input_dev, ABS_MT_POSITION,
 		0, ((1 << 31) | (ts->abs_x_max << 16) | ts->abs_y_max), 0, 0);
+	input_set_abs_params(ts->input_dev, ABS_MT_PRESSURE, 0, 255, 0, 0);
 #endif
 
 	ret = input_register_device(ts->input_dev);
